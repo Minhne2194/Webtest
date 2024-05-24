@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'quicksand_bold';
+    src: url('../Font/Quicksand-Bold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'quicksand_light';
+    src: url('../Font/Quicksand-Light.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'quicksand_medium';
+    src: url('../Font/Quicksand-Medium.ttf') format('ttf');
+}
+
+*{
+    font-family: 'quicksand_light';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 60%;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right:0;
+    z-index: 1000;
+    background: #EEEEEE;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .name{
+    font-size: 2rem;
+    color: black;
+    font-weight: 600;
+}
+
+header .navbar a{
+    font-size: 1.5rem;
+    color: black;
+    margin: 0 2rem;
+}
+header .navbar a:hover{
+    color: #C73659;
+}
+
+header .icons a{
+    font-size: 2rem;
+    color: black;
+    margin-left: 1.5rem;
+}
+header .icons a:hover{
+    color: #C73659;
+}
+
+#nav_input{
+    display: none;
+}
+
+header .menu_bar{
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    border: .1rem solid #000;
+    color: #000;
+    border-radius: .3rem;
+    cursor: pointer;
+    display: none;
+}
+
+.nav_mobile{
+    font-size: 18px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  rgba(255, 255, 255, .8);
+    backdrop-filter: blur(15px);
+    border-radius: 0;
+    z-index: 100;
+    overflow: hidden;
+    transform: translateX(-120%);
+    opacity: 0;
+    transition: transform linear 0.2s, opacity linear 0.1s;
+}
+.nav_mobile li{
+    text-align: left;
+    font-weight: 700;
+    color: black;
+    padding: 0 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-bottom: 1.5px solid black;
+    width: 741px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+}
+.nav_mobile .nav_close{
+    width: 28px;
+    height: 28px;
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 0rem;
+    margin-bottom: 1rem;
+}
+
+.nav_mobile .name_mobile{
+    text-align: center;
+    font-weight: 700;
+    color: black;
+    padding: 0 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1.5px solid black;
+    width: 741px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+}
+
+#nav_input:checked ~ .nav_mobile{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+/* Responsive */
+@media  (max-width: 870px){
+    header .menu_bar{
+        display: block;
+    }
+
+    header .navbar{
+        display: none;
+    }
+
+    .nav_mobile{
+        display: block;
+    }
+
+}
+
+
+/* Image shoes */
+
+
